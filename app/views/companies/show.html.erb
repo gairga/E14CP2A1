@@ -5,5 +5,24 @@
   <%= @company.name %>
 </p>
 
+
+<%= form_with(model: [@company, @employee ]) do |f| %>
+	<%= f.label :first_name %>
+	<%= f.text_field :first_name %>
+	<%= f.label :last_name %>
+	<%= f.text_field :last_name %>
+
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+	
+	<%= f.label :area %>
+
+	<%= f.select :area_id, @areas %>
+
+
+	<%= f.submit :enviar %>
+<% end %>
+
+
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
