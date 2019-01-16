@@ -19,7 +19,8 @@ class EmployeesController < ApplicationController
 		@company = Company.find(params[:company_id])
 		@employee = Employee.new(product_params)
 		@employee.save
-		redirect_to company_path(@company.id), notice: ' creado satisfactoriamente!!!' 
+		redirect_to company_path(@company.id), notice: 'Empleado creado satisfactoriamente!!!'
+		 
 	end
 
 

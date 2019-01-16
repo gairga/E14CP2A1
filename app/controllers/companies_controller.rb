@@ -12,6 +12,8 @@ class CompaniesController < ApplicationController
   def show
       @employee = Employee.new
       @areas = Area.all.map { |a| [a.name, a.id] }
+      #@employee_company = Employee.where().all
+      @employee_company = Employee.all
   end
 
   # GET /companies/new

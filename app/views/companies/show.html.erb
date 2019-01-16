@@ -24,5 +24,13 @@
 <% end %>
 
 
+ <% @employee_company.each do |employee_c| %>
+    <p>
+    	<%= employee_c.first_name %>
+    </p>
+<% end %>
+
+
+
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
